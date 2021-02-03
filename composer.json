@@ -9,7 +9,7 @@
             "name": "Aziz Febriyanto",
             "email": "azizfebriyanto12@gmail.com"
         }
-    ],,
+    ],
     "autoload": {
         "psr-4": {
             "AzizSama\\LaPermission\\": "src/"
