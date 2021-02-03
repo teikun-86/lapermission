@@ -9,7 +9,19 @@
             "name": "Aziz Febriyanto",
             "email": "azizfebriyanto12@gmail.com"
         }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+    ],,
+    "autoload": {
+        "psr-4": {
+            "AzizSama\\LaPermission\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AzizSama\\LaPermission\\LaPermissionServiceProvider"
+            ]
+        }
+    }
 }
