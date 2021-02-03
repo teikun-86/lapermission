@@ -60,25 +60,20 @@ class LaPermissionServiceProvider extends ServiceProvider
     public function registerBladeDirectives()
     {
         Blade::directive('role', function ($expression) {
-            if(is_array($expression))
-            {
-                if(auth()->user())
-                {
-                    if(auth()->user())
-                    {
-
-                    }
-                }
-                $res = false;
-            }
-            else
-            {
-                $res = false;
-            }
+            $res = auth()->user()->hasRole($expression);
             return "<?php if($res) { ?>";
         });
 
         Blade::directive('endRole', function () {
+            return "<?php } ?>";
+        });
+
+        Blade::directive('permission', function($expression) {
+            $res = auth()->user()->hasPermission($expression);
+            return "<?php if($res) { ?>";
+        });
+
+        Blade::directive('endPermission', function() {
             return "<?php } ?>";
         });
     }
