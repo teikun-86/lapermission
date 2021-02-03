@@ -1,0 +1,15 @@
+{
+    "name": "azizsama/lapermission",
+    "description": "Laravel permission & role manager.",
+    "keywords": ["laravel", "permission", "role", "guard"],
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aziz Febriyanto",
+            "email": "azizfebriyanto12@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
