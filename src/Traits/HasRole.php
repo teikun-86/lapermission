@@ -81,5 +81,27 @@ trait HasRole
             throw new \Exception("Role not found '$role'. Please check the role name carefully.", 1);
         }
     }
+    
+    /**
+     * Detach role
+     * 
+     * @param string $role
+     */
+    public function detachRole($role)
+    {
+        $rl = Role::where('name', $role)->first();
+        if($rl)
+        {
+            if(!$this->hasRole($role))
+            {
+                throw new \Exception("The user does not have '$role' role.", 1);
+            }
+            LaPermission::removeRoleFromUser($this->id, $rl->id);
+        }
+        else
+        {
+            throw new \Exception("Role not found '$role'. Please check the role name carefully.", 1);
+        }
+    }
 
 }
