@@ -15,7 +15,7 @@ class AssignPermission extends Command
      *
      * @var string
      */
-    protected $signature = 'lapermission:assign-role
+    protected $signature = 'lapermission:assign-permission
                                     {permission_id? : Permission ID}
                                     {role_id? : Role ID}';
 
