@@ -15,11 +15,6 @@ return [
      */
     'middleware' => [
         /**
-         * enable or disable lapermission middleware
-         */
-        'enabled' => true,
-
-        /**
          * Handling
          * To handle if user does not have required role/permission
          * 
@@ -54,15 +49,5 @@ return [
                 ]
             ]
         ]
-    ],
-
-    /**
-     * LaPermission magic methods
-     * enable or disable LaPermission magic methods
-     * available magic methods:
-     *      1. hasPermission('Edit Post')
-     *      2. hasRole('Super Admin')
-     */
-    'magic_enable' => true,
-    
+    ],   
 ];
