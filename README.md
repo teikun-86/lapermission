@@ -117,17 +117,29 @@ Laravel role and permission manager
    $user->detachRole('Administrator'); // this code will remove Administrator role from selected user.
    ```
 ##### Using Blade Directives
-1. `@role` and `@endrole`
+1. `@role` and `@endRole`
    
    `@role` directive works like `hasRole()` method.
    ```php
    @role('Admin')
       // If user has 'Admin' role
-   @endrole
+   @endRole
    // you can also pass array of roles
    @role(['Admin', 'Writer'])
       // if user has 'Admin' or 'Writer' role
-   @endrole
+   @endRole
+   ```
+1. `@permission` and `@endPermission`
+   
+   `@permission` directive works like `hasPermission()` method.
+   ```php
+   @permission('create post')
+      // If user has 'create post' permission
+   @endPermission
+   // you can also pass array of permissions
+   @permission(['create post', 'edit post'])
+      // if user has 'create post' or 'edit post' permission
+   @endPermission
    ```
 
 ##### Using Artisan Commands
