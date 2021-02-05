@@ -22,8 +22,7 @@ class LaPermissionMiddleware
 
         $method = $type === 'role' ? 'hasRole' : 'hasPermision';
 
-        return !Auth::guard($type)->guest() && 
-            Auth::guard($type)->user()->$method($args);
+        return !Auth::guest() && Auth::user()->$method($args);
     }
 
     /**
